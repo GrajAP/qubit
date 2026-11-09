@@ -30,6 +30,10 @@ Ostrzeżenia `SyntaxWarning` przy pierwszym imporcie są niegroźne.
 
 VS Code musi być uruchomiony z `nix develop`, bo pakiety z PyPI (np. `qiskit-aer`) potrzebują ustawionego `LD_LIBRARY_PATH`. Inaczej kernel zgłosi błąd `libstdc++.so.6: cannot open shared object file`.
 
+## Notebooki
+
+- `shor.ipynb`: algorytm Shora na symulatorze, rozkłada liczby do 1007 (np. 1007 = 19 · 53).
+
 ## Conda (bez Nixa)
 
 ```
