@@ -12,7 +12,7 @@ cd qubit
 nix develop
 ```
 
-Pierwsze `nix develop` tworzy `.venv` i instaluje pakiety z `environment.yml` (kilka minut). Kolejne uruchomienia trwają parę sekund.
+Pierwsze `nix develop` tworzy `.venv` i instaluje pakiety z `requirements.txt` (kilka minut). Kolejne uruchomienia trwają parę sekund.
 
 Sprawdzenie:
 
@@ -58,15 +58,8 @@ Wnioski:
 - Obwody z małym splątaniem (np. stan GHZ) z `AerSimulator(method="matrix_product_state")` działają nawet dla 1000 kubitów w 0.3 s.
 - Algorytm Shora w `shor.ipynb` ma inną granicę: macierz bramki mnożenia rośnie 4 razy z każdym bitem liczby. 1007 zajmuje ok. 35 s, 2021 nie kończy się w 10 minut.
 
-Sprawdź swój komputer (w `nix develop` albo `conda activate qubit`):
+Sprawdź swój komputer (w `nix develop`):
 
 ```
 python benchmark.py 20 24 26 28
-```
-
-## Conda (bez Nixa)
-
-```
-conda env create -f environment.yml
-conda activate qubit
 ```

@@ -37,12 +37,10 @@
           shellHook = ''
             [ -d .venv ] || uv venv --quiet --python ${pkgs.python312}/bin/python3.12 .venv
             source .venv/bin/activate
-            stamp=.venv/.environment.sha256
-            hash=$(sha256sum environment.yml | cut -d' ' -f1)
+            stamp=.venv/.requirements.sha256
+            hash=$(sha256sum requirements.txt | cut -d' ' -f1)
             if [ "$(cat "$stamp" 2>/dev/null)" != "$hash" ]; then
-              awk '/- pip:/ { p = 1; next } p && /^ *- / { sub(/#.*/, ""); sub(/^ *- */, ""); sub(/ *$/, ""); print }' \
-                environment.yml > .venv/requirements.txt
-              uv pip install -r .venv/requirements.txt && echo "$hash" > "$stamp"
+              uv pip install -r requirements.txt && echo "$hash" > "$stamp"
             fi
           '';
         };
