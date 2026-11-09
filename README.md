@@ -34,6 +34,9 @@ VS Code musi być uruchomiony z `nix develop`, bo pakiety z PyPI (np. `qiskit-ae
 
 - `1_wyzarzanie_dwave.ipynb`: wyżarzanie kwantowe, QUBO i Ising (D-Wave Ocean).
 - `2_kubit_i_bramki_iqm.ipynb`: kubit, bramki i pomiar, obwód na modelu komputera IQM z szumem.
+- `3_kwantowa_telepatia.ipynb`: gry nielokalne (GHZ na 3 kubitach, magiczny kwadrat na 4), wygrane ponad limit klasyczny i jak szum to psuje.
+- `4_kamien_papier_nozyce.ipynb`: bot na 4 albo 5 kubitach uczy się Twoich nawyków w kamień, papier, nożyce; turniej z szumem i gra na żywo.
+- `5_dylemat_wieznia.ipynb`: kwantowy dylemat więźnia na 2 kubitach: strategia Q, uczące się boty, równowaga przez losowanie, szum.
 - `shor.ipynb`: algorytm Shora na symulatorze, rozkłada liczby do 1007 (np. 1007 = 19 · 53).
 - `test.ipynb`: szybki test, czy środowisko działa.
 
